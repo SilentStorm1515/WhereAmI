@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Where am I - Find Me</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!--<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600&family=Urbanist:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600&family=Raleway&family=Urbanist:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <script src="FindLocation.js"></script> 
+    <div class="navbar">
+      <ul>
+        <li><img class="logo" src="logo-new.png" title="Where Am I? Logo"></li>
+        <li><a class="homepage" href="index.html">Find Me</a></li>
+        <li><a class="aboutpage" href="about.html">About</a></li>
+        <li><a class="latlongpage" href="latlong.html">Latitude and Longitude</a></li>
+        <li><a class="searchpage" href="search.html">Search for a Native Group</a></li>
+      </ul>
+    </div>
+    <iframe class="fadein-iframe" src="https://native-land.ca/api/embed/embed.html?maps=languages&name=witsuwiten" id="iframeMap" style="visibility: hidden;"></iframe>
+    
+    <h4 class="fadein-text" id="detailsTag">Give us a second...</h4>
+    
+    <p class="fadein-text" class="location" id="locationDetails"></p>
+    <br>
+    <p class="fadein-text" class="furtherinfo" id="links"></p>
+
+  </body>
+</html>
+

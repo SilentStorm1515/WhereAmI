@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where Am I - Latitude & Longitude</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600&family=Urbanist:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600&family=Raleway&family=Urbanist:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="latlong.js"></script> 
+
+    <div class="navbar">
+      <ul>
+        <li><img class="logo" src="logo-new.png" title="Where Am I? Logo"></li>
+        <li><a class="homepage" href="index.html">Find Me</a></li>
+        <li><a class="aboutpage" href="about.html">About</a></li>
+        <li><a class="latlongpage" href="latlong.html">Latitude and Longitude</a></li>
+        <li><a class="searchpage" href="search.html">Search for a Native Group</a></li>
+      </ul>
+    </div>
+
+  <br>
+
+  <div class="errMessage" > <!-- only uses errMessage bcos errMessage has color preset-->
+    <p style="font-size: 18px;">Don't know a latitude or longitude? Use <a href="https://www.latlong.net/" target="_blank">this</a>!</p> 
+  </div>
+
+  <div class="LatLongFormDiv">
+    <form action="latlong.js" id="LatLongForm">
+
+        <input type="number" name="lat" id="lat" placeholder="Enter Latitude...">
+
+        <br>
+        <br>
+
+        <input type="number" name="long" id="long" placeholder="Enter Longitude...">
+        <br><br>
+        <input class="submitlatlong" type="button" value="Submit" id = "submit" onClick = "setLatLong()">
+      </form>
+  </div>
+
+  <div class="errMessage" id="errMessageDiv" style="visibility: hidden;">
+    <p id="inputFailed" style="font-size: 18px; color: red;"><strong>Please only enter positions in Canada or the US!</strong></p> 
+  </div>
+
+  <div id="LatLongContent" class="LatLongConent" style="visibility: hidden">
+    <iframe class="fadein-iframe"src="https://native-land.ca/api/embed/embed.html?maps=languages&name=witsuwiten" id="iframeMap"></iframe>
+      
+      <h4 idclass="fadein-text">Details of your location:</h4>
+      
+      <p class="fadein-text" class="location" id="locationDetails"></p>
+      <br>
+      <p class="fadein-text" class="furtherinfo" id="links"></p>
+  </div>
+
+</body>
+</html>
